@@ -25,10 +25,10 @@ sudo yum install wget unzip -y
 ```
 ### Install Tomcat version 9.0.64
 ``` sh
-sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.63/bin/apache-tomcat-9.0.63.tar.gz
-sudo tar -xvf apache-tomcat-9.0.63.tar.gz
-sudo rm apache-tomcat-9.0.63.tar.gz
-sudo mv apache-tomcat-9.0.63 tomcat9
+sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz
+sudo tar -xvf apache-tomcat-9.0.78.tar.gz
+sudo rm apache-tomcat-9.0.78.tar.gz
+sudo mv apache-tomcat-9.0.78 tomcat9
 sudo chmod 777 -R /opt/tomcat9
 sudo sh /opt/tomcat9/bin/startup.sh
 # create a soft link to start and stop tomcat
