@@ -11,7 +11,7 @@
 + Create Security Group and open Required ports.
    + 9000 ..etc
 + Attach Security Group to EC2 Instance.
-+ Install java openJDK 1.8+ for SonarQube version 7.8
++ Install java openJDK 1.8+ for SonarQube version 10.1
 
 ## 1. Create sonar user to manage the SonarQube server
 ```sh
@@ -40,10 +40,11 @@ sudo yum install jdk-8u131-linux-x64.rpm -y
 ```
 ### 4. Download and extract the SonarqQube Server software.
 ```sh
-sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.8.zip
-sudo unzip sonarqube-7.8.zip
-sudo rm -rf sonarqube-7.8.zip
-sudo mv sonarqube-7.8 sonarqube
+sudo echo delete the failed version of sonerqube-7.8
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.1.zip
+sudo unzip sonarqube-10.1.zip
+sudo rm -rf sonarqube-10.1.zip
+sudo mv sonarqube-10.1 sonarqube
 ```
 
 ## 5. Grant file permissions for sonar user to start and manage sonarQube
