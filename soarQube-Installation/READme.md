@@ -40,7 +40,6 @@ sudo yum install jdk-8u131-linux-x64.rpm -y
 ```
 ### 4. Download and extract the SonarqQube Server software.
 ```sh
-sudo echo delete the failed version of sonerqube-7.8
 sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.1.zip
 sudo unzip sonarqube-10.1.zip
 sudo rm -rf sonarqube-10.1.zip
