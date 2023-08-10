@@ -19,10 +19,10 @@
 # create a new user called sonar and grant sudo access to manage sonar services as follows
 
 sudo useradd sonar
-# Grand sudo access to sonar user
+# Grant sudo access to sonar user
 sudo echo "sonar ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/sonar
-# set hostname for the sonarqube server
-sudo hostnamectl set-hostname sonar 
+sudo hostname sonar
+sudo passwd sonar
 sudo su - sonar
 ```
 ## 1b. Assign password to sonar user
