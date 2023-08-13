@@ -30,22 +30,25 @@ sudo su - sonar
 sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
 sudo service sshd restart
 ```
-### 3. Install Java JDK 1.8+ required for sonarqube to start
+### 3. Install java-11-openjdk required for sonarqube to start
 
 ``` sh
 cd /opt
+sudo yum update -y
+sudo yum install vim wget curl unzip git java-11-openjdk-devel -y
 sudo yum -y install unzip wget git
+
 sudo wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm
-sudo yum install jdk-8u131-linux-x64.rpm -y
+
 ```
 ### 4. Download and extract the SonarqQube Server software.
 ```sh
-sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.8.zip
-sudo unzip sonarqube-7.8.zip
-sudo rm -rf sonarqube-7.8.zip
-sudo mv sonarqube-7.8 sonarqube
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.1.0.47736.zip
+sudo unzip sonarqube-9.1.0.47736.zip
+sudo rm -rf sonarqube-9.1.0.47736.zip
+sudo mv sonarqube-9.1.0.47736 sonarqube
+   
 ```
-
 ## 5. Grant file permissions for sonar user to start and manage sonarQube
 ```sh
 sudo chown -R sonar:sonar /opt/sonarqube/
